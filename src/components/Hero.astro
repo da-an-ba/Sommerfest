@@ -1,16 +1,21 @@
 ---
 ---
+<div class="warning-bar">
+  🦄&nbsp; Eltern haften für ihre Einhörner. &nbsp;🦄&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  🦄&nbsp; Eltern haften für ihre Einhörner. &nbsp;🦄&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  🦄&nbsp; Eltern haften für ihre Einhörner. &nbsp;🦄
+</div>
+
 <section class="hero">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
 
-  <div class="hero-eyebrow">✨ Sommer 2025 — Offiziell einmalig ✨</div>
+  <div class="hero-eyebrow">✨ Sommer 2026 — Offiziell einmalig ✨</div>
 
   <h1 class="hero-title">
     <span class="names">Alvas &amp; Lailas</span>
-    <span class="main">Einhorn·Wasser</span>
-    <span class="fest">Sommerfest</span>
+    <span class="main">Einhorn-Wasser-Sommerfest</span>
   </h1>
 
   <p class="hero-kicker">
@@ -20,7 +25,7 @@
   <div class="hero-meta">
     <div class="meta-pill">
       <span class="meta-label">Wann</span>
-      Sa, 12. Juli 2025
+      Sa, 11. Juli 2026
     </div>
     <div class="meta-pill">
       <span class="meta-label">Zeit</span>
@@ -37,12 +42,6 @@
     <div class="scroll-cue-chevron"></div>
   </div>
 </section>
-
-<div class="warning-bar">
-  ⚠️&nbsp; Offizielle Warnung: Wer kommt, wird nass. Das ist kein Bug, das ist das Feature.
-  &nbsp;⚠️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  🦄&nbsp; Einhorn-Energie ist ansteckend. Eltern haften für mitgerissene Erwachsene. &nbsp;🦄
-</div>
 
 <style>
   .hero {
@@ -107,22 +106,18 @@
   }
   .hero-title .main {
     display: block;
-    font-size: clamp(3rem, 10vw, 7rem);
+    font-size: clamp(2rem, 7vw, 5rem);
     font-weight: 900;
-    background: linear-gradient(100deg, var(--pink) 0%, var(--violet) 35%, var(--cyan) 65%, var(--mint) 100%);
-    background-size: 250%;
+    /* doubled gradient so the loop seam is never visible */
+    background: linear-gradient(90deg,
+      var(--pink), var(--violet), var(--cyan), var(--mint),
+      var(--pink), var(--violet), var(--cyan), var(--mint)
+    );
+    background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 5s linear infinite;
-  }
-  .hero-title .fest {
-    display: block;
-    font-size: clamp(1.4rem, 4vw, 2.6rem);
-    font-weight: 900;
-    color: rgba(255,255,255,.9);
-    letter-spacing: .05rem;
-    margin-top: .2rem;
+    animation: shimmer 6s linear infinite;
   }
 
   .hero-kicker {

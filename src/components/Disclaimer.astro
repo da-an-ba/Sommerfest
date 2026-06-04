@@ -1,21 +1,30 @@
 ---
+const paragraphs = [
+  {
+    head: '§ 1 — Nasswerden',
+    body: 'Die Veranstalterinnen übernehmen keinerlei Haftung für nasse Kleidung, pitschnasse Haare oder komplett durchweichte Turnschuhe. Das war so geplant.',
+  },
+  {
+    head: '§ 2 — Einhorn-Energie',
+    body: 'Einhorn-Energie ist ansteckend. Wer kommt, läuft Gefahr, plötzlich Glitzer im Gesicht zu haben. Eltern sind ausdrücklich mitgemeint.',
+  },
+  {
+    head: '§ 3 — Das dritte Würstchen',
+    body: 'Ein drittes Würstchen ist keine Schwäche. Es ist Strategie.',
+  },
+];
 ---
 <section class="section disclaimer-section">
   <div class="section-inner" style="text-align:center">
     <p class="eyebrow reveal">Wichtige Hinweise</p>
     <h2 class="section-title reveal reveal-delay-1">Das <em>Kleingedruckte</em></h2>
     <div class="disclaimer-box reveal reveal-delay-2">
-      <div class="d-head">§ 1 — Nasswerden</div>
-      <p>
-        Die Veranstalterinnen (Alva &amp; Laila, beide unter 10) übernehmen keinerlei Haftung
-        für nasse Kleidung, pitschnasse Haare oder komplett durchweichte Turnschuhe.
-        Das war so geplant.
-      </p>
-      <p>
-        § 2 — Einhorn-Energie ist ansteckend. Wer kommt, läuft Gefahr, plötzlich
-        Glitzer im Gesicht zu haben. § 3 — Ein drittes Würstchen ist keine Schwäche,
-        es ist Strategie.
-      </p>
+      {paragraphs.map((p, i) => (
+        <div class={`d-item${i > 0 ? ' d-item--border' : ''}`}>
+          <div class="d-head">{p.head}</div>
+          <p>{p.body}</p>
+        </div>
+      ))}
     </div>
   </div>
 </section>
@@ -29,11 +38,18 @@
     background: white;
     border-left: 5px solid var(--violet);
     border-radius: 0 var(--card-r) var(--card-r) 0;
-    padding: 1.6rem 2rem;
-    text-align: left;
     box-shadow: 0 4px 24px rgba(109,40,217,.08);
+    overflow: hidden;
   }
-  .d-head { font-size: 1rem; font-weight: 900; color: #5b21b6; margin-bottom: .5rem; }
-  .disclaimer-box p { font-size: .9rem; font-weight: 600; color: #6d5a8a; line-height: 1.6; }
-  .disclaimer-box p + p { margin-top: .5rem; }
+
+  .d-item {
+    padding: 1.4rem 2rem;
+    text-align: left;
+  }
+  .d-item--border {
+    border-top: 1px solid #ede9fe;
+  }
+
+  .d-head { font-size: 1rem; font-weight: 900; color: #5b21b6; margin-bottom: .4rem; }
+  .d-item p { font-size: .9rem; font-weight: 600; color: #6d5a8a; line-height: 1.6; }
 </style>
