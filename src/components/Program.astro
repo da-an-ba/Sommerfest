@@ -1,4 +1,5 @@
 ---
+import unicornRainbow from '../assets/unicorns/unicorn-rainbow.png';
 const cards = [
   { color: 'c-pink',   icon: '🔥', title: 'Grillen',   desc: 'Wir stellen den Grill — ihr bringt Grillgut, Salat und Brot mit. Nachschlag ausdrücklich erlaubt.' },
   { color: 'c-amber',  icon: '⛱️', title: 'Sandeln',   desc: 'Burgen, Tunnel, rätselhafte Strukturen. Wer am Abend noch Sand in den Ohren hat, hat gewonnen.' },
@@ -10,7 +11,7 @@ const cards = [
 ---
 <section class="section program-section">
   <div class="section-inner">
-    <img src={`${import.meta.env.BASE_URL}unicorns/unicorn-rainbow.png`} alt="" class="section-unicorn reveal" />
+    <img src={unicornRainbow.src} alt="" class="section-unicorn reveal" />
     <p class="eyebrow reveal">Was geht ab</p>
     <h2 class="section-title reveal reveal-delay-1">Das Programm 🌈</h2>
 

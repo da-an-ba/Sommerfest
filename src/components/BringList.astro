@@ -1,4 +1,5 @@
 ---
+import unicornHeart from '../assets/unicorns/unicorn-heart.png';
 const items = [
   { icon: '🥩', label: 'Grillgut' },
   { icon: '🥗', label: 'Salat' },
@@ -14,7 +15,7 @@ const items = [
 ---
 <section class="section bring-section">
   <div class="section-inner">
-    <img src={`${import.meta.env.BASE_URL}unicorns/unicorn-heart.png`} alt="" class="section-unicorn reveal" />
+    <img src={unicornHeart.src} alt="" class="section-unicorn reveal" />
     <p class="eyebrow reveal">Checkliste</p>
     <h2 class="section-title reveal reveal-delay-1">Was mitbringen?</h2>
     <div class="bring-grid">
