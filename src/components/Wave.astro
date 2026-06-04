@@ -1,13 +1,14 @@
 ---
 interface Props {
-  bg:   string;
-  fill: string;
-  path: string;
+  bg:     string;
+  fill:   string;
+  path:   string;
+  height?: number;
 }
-const { bg, fill, path } = Astro.props;
+const { bg, fill, path, height = 72 } = Astro.props;
 ---
 <div class="wave" style={`background:${bg}`}>
-  <svg viewBox="0 0 1440 72" preserveAspectRatio="none">
+  <svg viewBox={`0 0 1440 ${height}`} preserveAspectRatio="none">
     <path d={path} fill={fill} />
   </svg>
 </div>

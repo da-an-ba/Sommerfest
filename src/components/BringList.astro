@@ -1,5 +1,8 @@
 ---
 const items = [
+  { icon: '🥩', label: 'Grillgut' },
+  { icon: '🥗', label: 'Salat' },
+  { icon: '🍺', label: 'Bier' },
   { icon: '👙', label: 'Badesachen' },
   { icon: '🏖️', label: 'Handtuch' },
   { icon: '🧴', label: 'Sonnencreme' },
@@ -7,11 +10,11 @@ const items = [
   { icon: '🔫', label: 'Wasserpistole' },
   { icon: '😄', label: 'Gute Laune' },
   { icon: '🦄', label: 'Einhorn-Energie' },
-  { icon: '🍦', label: 'Eiscreme-Erwartungen' },
 ];
 ---
 <section class="section bring-section">
   <div class="section-inner">
+    <img src={`${import.meta.env.BASE_URL}unicorns/unicorn-heart.png`} alt="" class="section-unicorn reveal" />
     <p class="eyebrow reveal">Checkliste</p>
     <h2 class="section-title reveal reveal-delay-1">Was mitbringen?</h2>
     <div class="bring-grid">

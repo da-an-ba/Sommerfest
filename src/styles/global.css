@@ -65,6 +65,15 @@ body.locked { overflow: hidden; }
 .reveal-delay-4      { transition-delay: .4s; }
 .reveal-delay-5      { transition-delay: .5s; }
 
+/* ── section heading unicorn illustrations ── */
+.section-unicorn {
+  display: block;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto 1.1rem;
+}
+
 /* ── particles (JS-created, cannot use scoped styles) ── */
 .particle {
   position: absolute;
