@@ -1,0 +1,61 @@
+---
+---
+<section class="section cta-section">
+  <span class="cta-bg-emoji" aria-hidden="true">🌈</span>
+  <div class="section-inner">
+    <h2 class="cta-title reveal">
+      Wir freuen uns<br><span class="grad">auf euch!</span>
+    </h2>
+    <p class="cta-sub reveal reveal-delay-1">
+      Kommt zahlreich. Kommt mutig. Kommt mit einem Handtuch. Es wird magisch.
+    </p>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    background: radial-gradient(ellipse at 30% 40%, #4c0098 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 60%, #0c3460 0%, transparent 55%),
+                var(--dark2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-bg-emoji {
+    position: absolute;
+    font-size: 18rem;
+    opacity: .03;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .cta-title {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+  }
+  .grad {
+    background: linear-gradient(90deg, var(--pink), var(--violet), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-sub {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(255,255,255,.5);
+    max-width: 420px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 1;
+  }
+</style>

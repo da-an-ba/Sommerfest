@@ -1,0 +1,32 @@
+---
+import Base        from '../layouts/Base.astro';
+import PasswordGate from '../components/PasswordGate.astro';
+import Hero        from '../components/Hero.astro';
+import Wave        from '../components/Wave.astro';
+import Location    from '../components/Location.astro';
+import Program     from '../components/Program.astro';
+import Disclaimer  from '../components/Disclaimer.astro';
+import BringList   from '../components/BringList.astro';
+import CTA         from '../components/CTA.astro';
+---
+
+<Base title="Alvas & Lailas Einhorn-Wasser-Sommerfest 🦄">
+  <PasswordGate />
+
+  <Hero />
+  <Wave bg="var(--dark)"  fill="var(--light)" path="M0,36 C320,72 820,0 1440,48 L1440,72 L0,72 Z" />
+
+  <Location />
+  <Wave bg="var(--light)" fill="white"        path="M0,48 C480,0 960,72 1440,24 L1440,72 L0,72 Z" />
+
+  <Program />
+  <Wave bg="white"        fill="#f5f3ff"      path="M0,24 C360,72 1080,0 1440,48 L1440,72 L0,72 Z" />
+
+  <Disclaimer />
+  <Wave bg="#f5f3ff"      fill="#ecfeff"      path="M0,0 C480,72 960,12 1440,56 L1440,72 L0,72 Z" />
+
+  <BringList />
+  <Wave bg="#ecfeff"      fill="var(--dark2)" path="M0,56 C320,0 1100,72 1440,20 L1440,72 L0,72 Z" />
+
+  <CTA />
+</Base>

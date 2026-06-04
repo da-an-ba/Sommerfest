@@ -1,0 +1,65 @@
+---
+const cards = [
+  { color: 'c-pink',   icon: '🔥', title: 'Grillen',  desc: 'Würstchen, Spieße, Halloumi für die Unerschrockenen. Nachschlag ausdrücklich erlaubt.' },
+  { color: 'c-amber',  icon: '⛱️', title: 'Sandeln',  desc: 'Burgen, Tunnel, rätselhafte Strukturen. Wer am Abend noch Sand in den Ohren hat, hat gewonnen.' },
+  { color: 'c-violet', icon: '💨', title: 'Flitzen',  desc: 'Wettrennen, Fangen, Herumtoben bis die Knie stauben. Eltern dürfen anfeuern.' },
+  { color: 'c-mint',   icon: '🎨', title: 'Malen',    desc: 'Einhörner, Regenbögen, abstrakte Meisterwerke. Alles erlaubt, Hauptsache bunt.' },
+  { color: 'c-cyan',   icon: '💦', title: 'Planschen', desc: 'Wasserpistolen, Planschbecken, Eimer. Nasswerden ist Pflicht. Trockene Haare sind verdächtig.' },
+];
+---
+<section class="section program-section">
+  <div class="section-inner">
+    <p class="eyebrow reveal">Was geht ab</p>
+    <h2 class="section-title reveal reveal-delay-1">Das Programm 🌈</h2>
+
+    <div class="program-grid">
+      {cards.map((c, i) => (
+        <div class={`p-card ${c.color} reveal reveal-delay-${i + 1}`}>
+          <span class="p-icon">{c.icon}</span>
+          <div class="p-title">{c.title}</div>
+          <div class="p-desc">{c.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .program-section { background: white; }
+
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+  }
+
+  .p-card {
+    border-radius: var(--card-r);
+    padding: 2rem 1.6rem 1.8rem;
+    cursor: default;
+    transition: transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .p-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,.12);
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  .p-card:hover { transform: translateY(-10px) rotate(-1.5deg); box-shadow: 0 20px 50px -10px rgba(0,0,0,.25); }
+  .p-card:hover::after { opacity: 1; }
+
+  .c-pink   { background: linear-gradient(140deg, #f472b6, #ec4899); color: #fff; }
+  .c-amber  { background: linear-gradient(140deg, #fbbf24, #f59e0b); color: #fff; }
+  .c-violet { background: linear-gradient(140deg, #a78bfa, #7c3aed); color: #fff; }
+  .c-cyan   { background: linear-gradient(140deg, #22d3ee, #0891b2); color: #fff; }
+  .c-mint   { background: linear-gradient(140deg, #6ee7b7, #10b981); color: #fff; }
+
+  .p-icon  { font-size: 2.4rem; display: block; margin-bottom: .8rem; }
+  .p-title { font-size: 1.35rem; font-weight: 900; margin-bottom: .4rem; }
+  .p-desc  { font-size: .85rem; font-weight: 600; opacity: .85; line-height: 1.5; }
+</style>

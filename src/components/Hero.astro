@@ -1,0 +1,221 @@
+---
+---
+<section class="hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="hero-eyebrow">✨ Sommer 2025 — Offiziell einmalig ✨</div>
+
+  <h1 class="hero-title">
+    <span class="names">Alvas &amp; Lailas</span>
+    <span class="main">Einhorn·Wasser</span>
+    <span class="fest">Sommerfest</span>
+  </h1>
+
+  <p class="hero-kicker">
+    „Kein normales Sommerfest. Irgendwas mit Einhörnern. Viel Wasser. Wahrscheinlich Würstchen."
+  </p>
+
+  <div class="hero-meta">
+    <div class="meta-pill">
+      <span class="meta-label">Wann</span>
+      Sa, 12. Juli 2025
+    </div>
+    <div class="meta-pill">
+      <span class="meta-label">Zeit</span>
+      14:00 – 20:00 Uhr
+    </div>
+    <div class="meta-pill">
+      <span class="meta-label">Wo</span>
+      Pleikartsförster Hof
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>scroll</span>
+    <div class="scroll-cue-chevron"></div>
+  </div>
+</section>
+
+<div class="warning-bar">
+  ⚠️&nbsp; Offizielle Warnung: Wer kommt, wird nass. Das ist kein Bug, das ist das Feature.
+  &nbsp;⚠️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  🦄&nbsp; Einhorn-Energie ist ansteckend. Eltern haften für mitgerissene Erwachsene. &nbsp;🦄
+</div>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 6rem 1.5rem 5rem;
+    background: radial-gradient(ellipse at 20% 30%, #3b0764 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 70%, #0c4a6e 0%, transparent 60%),
+                var(--dark);
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+  }
+  .orb-1 { width: 50vw; height: 50vw; max-width: 500px; max-height: 500px;
+            background: var(--pink); opacity: .35; top: -15%; left: -10%;
+            animation: pulse 9s ease-in-out infinite; }
+  .orb-2 { width: 40vw; height: 40vw; max-width: 380px; max-height: 380px;
+            background: var(--violet); opacity: .3; bottom: -10%; right: -5%;
+            animation: pulse 11s ease-in-out infinite reverse; }
+  .orb-3 { width: 35vw; height: 35vw; max-width: 320px; max-height: 320px;
+            background: var(--cyan); opacity: .25; top: 40%; left: 55%;
+            animation: pulse 7s ease-in-out 2s infinite; }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    backdrop-filter: blur(12px);
+    border-radius: 2rem;
+    padding: .4rem 1.1rem;
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .12rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.75);
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title { position: relative; z-index: 2; line-height: 1.05; }
+  .hero-title .names {
+    display: block;
+    font-size: clamp(1.4rem, 4.5vw, 2.2rem);
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(255,255,255,.6);
+    letter-spacing: .05rem;
+    margin-bottom: .3rem;
+  }
+  .hero-title .main {
+    display: block;
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 900;
+    background: linear-gradient(100deg, var(--pink) 0%, var(--violet) 35%, var(--cyan) 65%, var(--mint) 100%);
+    background-size: 250%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 5s linear infinite;
+  }
+  .hero-title .fest {
+    display: block;
+    font-size: clamp(1.4rem, 4vw, 2.6rem);
+    font-weight: 900;
+    color: rgba(255,255,255,.9);
+    letter-spacing: .05rem;
+    margin-top: .2rem;
+  }
+
+  .hero-kicker {
+    position: relative;
+    z-index: 2;
+    margin-top: 1.4rem;
+    font-size: clamp(.95rem, 2.5vw, 1.2rem);
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(255,255,255,.5);
+    max-width: 520px;
+  }
+
+  .hero-meta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+  .meta-pill {
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.14);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: .7rem 1.2rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: .9rem;
+  }
+  .meta-label {
+    display: block;
+    font-size: .65rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    opacity: .5;
+    margin-bottom: .15rem;
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+    color: rgba(255,255,255,.25);
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .12rem;
+    text-transform: uppercase;
+  }
+  .scroll-cue-chevron {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid rgba(255,255,255,.25);
+    border-bottom: 2px solid rgba(255,255,255,.25);
+    transform: rotate(45deg);
+    animation: bob 1.6s ease-in-out infinite;
+  }
+
+  .warning-bar {
+    background: linear-gradient(90deg, #fde68a, #fca5a5, #fde68a);
+    background-size: 200%;
+    animation: slide-bg 4s linear infinite;
+    padding: .8rem 1.5rem;
+    text-align: center;
+    font-size: .85rem;
+    font-weight: 800;
+    color: #7c2d12;
+    letter-spacing: .04rem;
+  }
+</style>
+
+<script>
+  const hero = document.querySelector('.hero');
+  const colors = [
+    'rgba(244,114,182,.7)', 'rgba(167,139,250,.7)',
+    'rgba(34,211,238,.65)', 'rgba(110,231,183,.6)', 'rgba(255,255,255,.4)',
+  ];
+  for (let i = 0; i < 22; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = 5 + Math.random() * 9;
+    p.style.cssText = `left:${Math.random()*100}%;width:${size}px;height:${size}px;`
+      + `background:${colors[i % colors.length]};`
+      + `animation-duration:${7 + Math.random() * 12}s;`
+      + `animation-delay:${Math.random() * -18}s;`;
+    hero.appendChild(p);
+  }
+</script>

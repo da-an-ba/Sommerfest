@@ -1,0 +1,51 @@
+---
+const items = [
+  { icon: '👙', label: 'Badesachen' },
+  { icon: '🏖️', label: 'Handtuch' },
+  { icon: '🧴', label: 'Sonnencreme' },
+  { icon: '👒', label: 'Sonnenhut' },
+  { icon: '🔫', label: 'Wasserpistole' },
+  { icon: '😄', label: 'Gute Laune' },
+  { icon: '🦄', label: 'Einhorn-Energie' },
+  { icon: '🍦', label: 'Eiscreme-Erwartungen' },
+];
+---
+<section class="section bring-section">
+  <div class="section-inner">
+    <p class="eyebrow reveal">Checkliste</p>
+    <h2 class="section-title reveal reveal-delay-1">Was mitbringen?</h2>
+    <div class="bring-grid">
+      {items.map((item, i) => (
+        <div class={`b-card reveal reveal-delay-${(i % 5) + 1}`}>
+          <span class="b-icon">{item.icon}</span>
+          {item.label}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .bring-section { background: #ecfeff; }
+
+  .bring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .b-card {
+    background: white;
+    border-radius: var(--card-r);
+    padding: 1.4rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 16px rgba(6,182,212,.1);
+    font-weight: 700;
+    color: #164e63;
+    font-size: .9rem;
+    transition: transform .25s cubic-bezier(.34,1.56,.64,1);
+  }
+  .b-card:hover { transform: scale(1.06) rotate(1deg); }
+  .b-icon { font-size: 1.9rem; display: block; margin-bottom: .4rem; }
+</style>
