@@ -56,7 +56,7 @@ h1, h2, h3 {
 }
 
 /* ── wave dividers ── */
-.wave     { display: block; width: 100%; line-height: 0; overflow: hidden; }
+.wave     { display: block; width: 100%; line-height: 0; overflow: hidden; margin: -1px 0; }
 .wave svg { display: block; width: 100%; }
 
 /* ── scroll reveal ── */
