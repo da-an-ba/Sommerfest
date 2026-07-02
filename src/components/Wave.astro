@@ -4,10 +4,11 @@ interface Props {
   fill:   string;
   path:   string;
   height?: number;
+  nudge?:  number;
 }
-const { bg, fill, path, height = 72 } = Astro.props;
+const { bg, fill, path, height = 72, nudge = 0 } = Astro.props;
 ---
-<div class="wave" style={`background:${bg}`}>
+<div class="wave" style={`background:${bg};transform:translateY(${nudge}px)`}>
   <svg viewBox={`0 0 1440 ${height}`} preserveAspectRatio="none">
     <path d={path} fill={fill} />
   </svg>
